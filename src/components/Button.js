@@ -2,10 +2,14 @@ import {Pressable,Text} from 'react-native'
 
 const Button = ({state}) => {
 
-    const {setnavigation,text,destination,backgroundcolor,textcolor,fontweight} = state
+    const {setnavigation,text,destination,backgroundcolor,textcolor,fontweight,setback,back,back_} = state
 
     return(
-    <Pressable onPress={() => {setnavigation(destination)} } style={{
+    <Pressable onPress={() => {
+        setnavigation(destination) 
+        setback(back_)
+    } } 
+    style={{
         backgroundColor:backgroundcolor,
         display:'flex',
         justifyContent:'center',

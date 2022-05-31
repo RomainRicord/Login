@@ -9,34 +9,34 @@ import Header from './src/screens/Header';
 
 const App = () => {
 
-  const [navigation,setnavigation] = useState("Login")
-  const {back,setback} = useState("")
+  const [navigation,setnavigation] = useState("Welcome")
+  const [back,setback] = useState("")
 
   return (
     <View style={{flex:1}}>
       {navigation != "Welcome" && navigation != "Valid" &&
-        <Header state={{navigation,text:navigation,setback,back}}/>
+        <Header state={{setnavigation,text:navigation,setback,back}}/>
       }
     <View style={styles.container}>
 
       {navigation == "Welcome" &&
 
-        <Welcome state={{setnavigation,setback}} />
+        <Welcome state={{navigation,setnavigation,setback,back}} />
       
       }
       {navigation == "Login" &&
 
-        <Login state={{setnavigation,setback}} />
+        <Login state={{navigation,setnavigation,setback,back}} />
 
       }
       {navigation == "Register" &&
 
-        <Register state={{setnavigation,setback}} />
+        <Register state={{navigation,setnavigation,setback,back}} />
 
       }
       {navigation == "Valid" &&
 
-        <Valid state={{setnavigation,setback}} />
+        <Valid state={{navigation,setnavigation,setback,back}} />
 
       }
     </View>
