@@ -1,8 +1,7 @@
 import {View} from 'react-native'
 import TextInput_ from '../components/TextInput_'
 import Button from '../components/Button'
-import {useState} from 'react'
-
+import {useState,useEffect} from 'react'
 
 const Register = ({state}) => {
 
@@ -17,7 +16,11 @@ const Register = ({state}) => {
         setback,
         back
     } = state
-    
+
+    useEffect(() => {
+        setback("Welcome")    
+    }, []);
+
     return(
         <View>
             <View style={{display:'flex',justifyContent:'center',alignItems:'center'}}>

@@ -1,18 +1,15 @@
-import {View} from 'react-native'
+import {View,Text} from 'react-native'
 import TextInput_ from '../components/TextInput_'
 import Button from '../components/Button'
 import {useState} from 'react'
-
+import {Picker} from '@react-native-picker/picker';
+import PickerCivility from '../components/PickerCivility';
+import PickerDate from '../components/PickerDate';
+import {useEffect} from 'react'
 
 const RegisterNext = ({state}) => {
 
     const {
-        setemail,
-        email,
-        password,
-        setpassword,
-        confirmedpassword,
-        setconfirmedpassword,
         setnavigation,
         setback,
         back,
@@ -25,14 +22,19 @@ const RegisterNext = ({state}) => {
         civility,
         setcivility
     } = state
+
+    useEffect(() => {
+        setback("Register")  
+        console.log("Set Back Register Next")  
+    }, []);
     
     return(
         <View>
             <View style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
-                <TextInput_ state={{text_:"Email",placeholder_:"Entrez votre email",hide:false,set:setemail,get:email}}/>
+                <PickerCivility state={{civility,setcivility}} />
                 <TextInput_ state={{text_:"Prénom",placeholder_:"Entrez votre prénom",hide:false,set:setfirstname,get:firstname}}/>
                 <TextInput_ state={{text_:"Nom",placeholder_:"Entrez votre nom",hide:false,set:setlastname,get:lastname}}/>
-                <TextInput_ state={{text_:"Confirmation du mot de passe",placeholder_:"Entrez votre mot de passe",hide:true,set:setconfirmedpassword,get:confirmedpassword}}/>
+                <PickerDate state={{birthday,setbirthday}} />
                 <Button state={{setnavigation,setback,back_:"Login",radius:true,back,destination:"Valid",text:"Suivant",backgroundcolor:"blue",textcolor:'white'}}/> 
             </View>
         </View>

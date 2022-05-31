@@ -1,12 +1,18 @@
 import {View} from 'react-native'
 import Button from '../components/Button'
 import Logo from '../components/Logo'
+import {useEffect} from 'react'
 
 const Welcome = ({state}) => {
 
     //console.log(state.setnavigation)
+    
 
     const {setnavigation,setback,back} = state
+
+    useEffect(() => {
+        setback("")    
+    }, []);
 
     return(
         <View style={{flex:1,margin:40,flexDirection:'column',justifyContent:'space-around',alignItems:'center'}}>

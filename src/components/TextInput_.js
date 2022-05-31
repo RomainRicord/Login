@@ -1,6 +1,6 @@
 import { View,TextInput,Text,Pressable } from "react-native";
 import {useState,useEffect} from 'react'
-import Icon from 'react-native-vector-icons/fontawesome'
+import Icon from 'react-native-vector-icons/FontAwesome'
 
 const TextInput_ = ({state}) => {
 
@@ -10,7 +10,7 @@ const TextInput_ = ({state}) => {
     const [hider,sethider] = useState(hide)    
 
     return(
-        <View style={{width:400,margin:10}}>
+        <View style={{width:300,margin:10}}>
 
             <Text style={{fontSize:20,marginLeft:10,marginBottom:10}}>{text_}</Text>
 
@@ -25,6 +25,7 @@ const TextInput_ = ({state}) => {
                     }else{
                         seterror("")
                     }
+
                 }
 
                 if (text_ == "Mot de passe"){

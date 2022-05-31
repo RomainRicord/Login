@@ -1,6 +1,7 @@
 import {View,Image,Text,Pressable} from 'react-native'
 import Button from '../components/Button'
 import TextInput_ from '../components/TextInput_'
+import {useEffect} from 'react'
 
 const Login = ({state}) => {
 
@@ -13,6 +14,10 @@ const Login = ({state}) => {
         setback,
         back
     } = state
+
+    useEffect(() => {
+        setback("Welcome")    
+    }, []);
 
     return(
         <View style={{flex:4,display:'flex',justifyContent:'center',alignItems:'center'}}>

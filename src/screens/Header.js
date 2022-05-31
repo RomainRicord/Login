@@ -1,5 +1,5 @@
 import {View,Pressable,Text} from 'react-native'
-import Icon from 'react-native-vector-icons/fontawesome'
+import Icon from 'react-native-vector-icons/FontAwesome'
 
 const Header = ({state}) => {
 
