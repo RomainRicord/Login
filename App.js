@@ -8,7 +8,7 @@ import Valid from './src/screens/Valid'
 
 const App = () => {
 
-  const [navigation,setnavigation] = useState("Welcome")
+  const [navigation,setnavigation] = useState("Login")
 
   return (
     <View style={styles.container}>
