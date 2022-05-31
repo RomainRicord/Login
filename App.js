@@ -1,11 +1,31 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import {useState} from 'react'
+import Welcome from './src/screens/Welcome';
+import Login from './src/screens/Login'
+import Register from './src/screens/Register'
 
-export default function App() {
+const App = () => {
+
+  const [navigation,setnavigation] = useState("Welcome")
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      {navigation == "Welcome" &&
+
+        <Welcome state={{setnavigation}} />
+      
+      }
+      {navigation == "Login" &&
+
+        <Login state={{setnavigation}} />
+
+      }
+      {navigation == "Register" &&
+
+        <Login state={{setnavigation}} />
+
+      }
     </View>
   );
 }
@@ -18,3 +38,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+export default App
