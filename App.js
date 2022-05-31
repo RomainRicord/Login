@@ -4,6 +4,7 @@ import {useState} from 'react'
 import Welcome from './src/screens/Welcome';
 import Login from './src/screens/Login'
 import Register from './src/screens/Register'
+import Valid from './src/screens/Valid'
 
 const App = () => {
 
@@ -23,7 +24,12 @@ const App = () => {
       }
       {navigation == "Register" &&
 
-        <Login state={{setnavigation}} />
+        <Register state={{setnavigation}} />
+
+      }
+      {navigation == "Valid" &&
+
+        <Valid state={{setnavigation}} />
 
       }
     </View>

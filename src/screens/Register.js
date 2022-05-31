@@ -1,6 +1,6 @@
 import {View} from 'react-native'
 
-const Register = ({navigation}) => {
+const Register = ({state}) => {
     return(
         <View>
 

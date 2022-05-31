@@ -1,9 +1,13 @@
 import {View} from 'react-native'
+import Logo from '../components/Logo'
 
-const Welcome = ({navigation}) => {
+const Welcome = ({state}) => {
+
+    //console.log(state.setnavigation)
+
     return(
-        <View>
-
+        <View style={{flex:1,margin:40}}>
+            <Logo/>
         </View>
     )
 }

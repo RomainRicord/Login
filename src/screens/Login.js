@@ -1,6 +1,6 @@
 import {View} from 'react-native'
 
-const Login = ({setnavigation}) => {
+const Login = ({state}) => {
     return(
         <View>
 
