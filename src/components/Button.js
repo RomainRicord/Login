@@ -2,7 +2,18 @@ import {Pressable,Text} from 'react-native'
 
 const Button = ({state}) => {
 
-    const {setnavigation,text,destination,backgroundcolor,textcolor,fontweight,setback,back,back_} = state
+    const {
+        setnavigation,
+        text,
+        destination,
+        backgroundcolor,
+        textcolor,
+        fontweight,
+        setback,
+        back,
+        back_,
+        radius
+    } = state
 
     return(
     <Pressable onPress={() => {
@@ -17,7 +28,8 @@ const Button = ({state}) => {
         padding:20,
         borderWidth:backgroundcolor == "white" ? 2 : 0,
         margin:20,
-        width:400
+        width:400,
+        borderRadius:typeof(radius) == "undefined" ? 0 : 20
         }}>
         <Text style={{color:textcolor,textAlign:'center',fontSize:32,fontWeight:typeof(fontweight) == "undefined" ? '' : fontweight}}>{text}</Text>
     </Pressable>)
