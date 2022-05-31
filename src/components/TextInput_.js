@@ -7,8 +7,7 @@ const TextInput_ = ({state}) => {
     const {text_,placeholder_,set,get,hide} = state
 
     const [error,seterror] = useState("")
-    const [hider,sethider] = useState(hide)
-    
+    const [hider,sethider] = useState(hide)    
 
     return(
         <View style={{width:400,margin:10}}>
@@ -22,12 +21,29 @@ const TextInput_ = ({state}) => {
                     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
                     if (!re.test(e.target.value)){
-                        seterror("Addresse email non valide !")
+                        seterror("Adresse email non valide !")
                     }else{
                         seterror("")
                     }
                 }
-            }} style={{borderWidth:1,borderColor:"gray",borderRadius:20,padding:10}} placeholderTextColor="gray" placeholder={placeholder_} onChangeText={set} value={get} blurOnSubmit={true} secureTextEntry={hider}></TextInput>
+
+                if (text_ == "Mot de passe"){
+
+                    if (typeof(e.target.value) == "undefined" && e.target.value == "" && e.target.value.length <= 0) {
+                        seterror("Mot de passe non valide !")
+                    }else{
+                        seterror("")
+                    }
+
+                }
+
+            }} style={{borderWidth:1,borderColor:"gray",borderRadius:20,padding:10}} 
+            placeholderTextColor="gray" 
+            placeholder={placeholder_} 
+            onChangeText={set} 
+            value={get} 
+            blurOnSubmit={true} 
+            secureTextEntry={hider}></TextInput>
             {hide &&
                 <Pressable style={{position:'absolute',right:10,top:4}} onPress={() => {
                     sethider(!hider)

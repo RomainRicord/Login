@@ -8,7 +8,7 @@ const Header = ({state}) => {
     return(
     <View style={{display:'flex',height:50,backgroundColor:'gray',display:'flex',justifyContent:'center',flexDirection:'row'}}>
         
-        <View style={{flex:2,justifyContent:'space-between',alignItems:'center',flexDirection:'row'}}>
+        <View style={{flex:1,justifyContent:'space-between',alignItems:'center',flexDirection:'row'}}>
         <Pressable onPress={() => {
             setnavigation(back)
         }} style={{width:32,height:32,marginLeft:20}}>
@@ -17,10 +17,16 @@ const Header = ({state}) => {
 
         </Pressable>
         
-        <Text style={{display:'flex',justifyContent:'center',alignItems:'center',textAlign:'center',color:'black'}}>{text}</Text>
-        </View>
-        <View style={{flex:2}}>
         
+        </View>
+        <View style={{flex:1,justifyContent:'center',alignItems:'center'}}>
+        
+        <Text style={{display:'flex',justifyContent:'center',alignItems:'center',textAlign:'right',color:'black'}}>{text}</Text>
+
+        </View>
+
+        <View style={{flex:1}}>
+
         </View>
 
     </View>)
