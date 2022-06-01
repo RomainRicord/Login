@@ -35,7 +35,7 @@ const RegisterNext = ({state}) => {
                 <TextInput_ state={{text_:"Prénom",placeholder_:"Entrez votre prénom",hide:false,set:setfirstname,get:firstname}}/>
                 <TextInput_ state={{text_:"Nom",placeholder_:"Entrez votre nom",hide:false,set:setlastname,get:lastname}}/>
                 <PickerDate state={{birthday,setbirthday}} />
-                <Button state={{setnavigation,setback,back_:"Login",radius:true,back,destination:"Valid",text:"Suivant",backgroundcolor:"blue",textcolor:'white'}}/> 
+                <Button state={{setnavigation,setback,back_:"Login",radius:true,back,destination:"Valid",text:"TERMINÉ",backgroundcolor:"blue",textcolor:'white'}}/> 
             </View>
         </View>
     )

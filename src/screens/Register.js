@@ -27,7 +27,7 @@ const Register = ({state}) => {
                 <TextInput_ state={{text_:"Email",placeholder_:"Entrez votre email",hide:false,set:setemail,get:email}}/>
                 <TextInput_ state={{text_:"Mot de passe",placeholder_:"Entrez votre mot de passe",hide:true,set:setpassword,get:password}}/>
                 <TextInput_ state={{text_:"Confirmation du mot de passe",placeholder_:"Entrez votre mot de passe",hide:true,set:setconfirmedpassword,get:confirmedpassword}}/>
-                <Button state={{setnavigation,setback,back_:"Register",radius:true,back,destination:"RegisterNext",text:"Suivant",backgroundcolor:"blue",textcolor:'white'}}/> 
+                <Button state={{setnavigation,setback,back_:"Register",radius:true,back,destination:"RegisterNext",text:"Suivant",backgroundcolor:"#3457D5",textcolor:'white'}}/> 
             </View>
         </View>
     )

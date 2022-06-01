@@ -5,13 +5,13 @@ import Welcome from './src/screens/Welcome';
 import Login from './src/screens/Login'
 import Register from './src/screens/Register'
 import RegisterNext from './src/screens/RegisterNext';
-import Valid from './src/screens/Valid'
 import Header from './src/screens/Header';
 import { SafeAreaView } from 'react-native';
+import Success from './src/screens/Success';
 
 const App = () => {
 
-  const [navigation,setnavigation] = useState("Welcome")
+  const [navigation,setnavigation] = useState("Success")
   const [back,setback] = useState("")
   const [email,setemail] = useState("")
   const [password,setpassword] = useState("")
@@ -40,40 +40,38 @@ const App = () => {
 
   return (
     <SafeAreaView style={{flex:1}}>
-    <View style={{flex:1}}>
       {navigation != "Welcome" && navigation != "Valid" &&
         <Header state={{setnavigation,text:navigation,setback,back}}/>
       }
       
-    <View style={styles.container}>
+      <View style={styles.container}>
 
-      {navigation == "Welcome" &&
+        {navigation == "Welcome" &&
 
-        <Welcome state={{navigation,setnavigation,setback,back}} />
-      
-      }
-      {navigation == "Login" &&
+          <Welcome state={{navigation,setnavigation,setback,back}} />
+        
+        }
+        {navigation == "Login" &&
 
-        <Login state={{navigation,setnavigation,setback,back,email,setemail,password,setpassword}} />
+          <Login state={{navigation,setnavigation,setback,back,email,setemail,password,setpassword}} />
 
-      }
-      {navigation == "Register" &&
+        }
+        {navigation == "Register" &&
 
-        <Register state={{navigation,setnavigation,setback,back,email,setemail,password,setpassword,confirmedpassword,setconfirmedpassword}} />
+          <Register state={{navigation,setnavigation,setback,back,email,setemail,password,setpassword,confirmedpassword,setconfirmedpassword}} />
 
-      }
-      {navigation == "RegisterNext" &&
+        }
+        {navigation == "RegisterNext" &&
 
-        <RegisterNext state={{navigation,setnavigation,setback,back,email,setemail,password,setpassword,confirmedpassword,setconfirmedpassword,firstname,setfirstname,lastname,setlastname,birthday,setbirthday,civility,setcivility}} />
+          <RegisterNext state={{navigation,setnavigation,setback,back,email,setemail,password,setpassword,confirmedpassword,setconfirmedpassword,firstname,setfirstname,lastname,setlastname,birthday,setbirthday,civility,setcivility}} />
 
-      }
-      {navigation == "Valid" &&
-
-        <Valid state={{navigation,setnavigation,setback,back}} />
-
-      }
-    </View>
-    </View>
+        }
+        {navigation == "Success" &&
+        
+          <Success state={{navigation,setnavigation,setback,back}}/>
+        
+        }
+      </View>
     </SafeAreaView>
   );
 }

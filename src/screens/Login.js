@@ -25,14 +25,14 @@ const Login = ({state}) => {
             <TextInput_ state={{text_:"Email",placeholder_:"Entrez votre email",hide:false,set:setemail,get:email}}/>
             <TextInput_ state={{text_:"Mot de passe",placeholder_:"Entrez votre mot de passe",hide:true,set:setpassword,get:password}}/>
         
-            <Button state={{setnavigation,setback,back_:"Login",radius:true,back,destination:"Valid",text:"SE CONNECTER",backgroundcolor:"blue",textcolor:'white'}}/> 
+            <Button state={{setnavigation,setback,back_:"Login",radius:true,back,destination:"Valid",text:"SE CONNECTER",backgroundcolor:"#3457D5",textcolor:'white'}}/> 
 
             <View style={{display:'flex',justifyContent:'center',flexDirection:'row'}}>
                 <Text>Pas encore inscrit ?</Text>
                 <Pressable onPress={() => {
                     setnavigation("Register")
                     setback("Login")
-            }}><Text style={{color:'blue',marginLeft:5}}>Créer un compte</Text></Pressable>
+            }}><Text style={{color:'#3457D5',marginLeft:5}}>Créer un compte</Text></Pressable>
             </View>
         </View>
     )

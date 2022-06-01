@@ -29,7 +29,7 @@ const Button = ({state}) => {
         borderWidth:backgroundcolor == "white" ? 2 : 0,
         margin:20,
         width:300,
-        borderRadius:typeof(radius) == "undefined" ? 0 : 20
+        borderRadius:typeof(radius) == "undefined" ? 0 : 40
         }}>
         <Text style={{color:textcolor,textAlign:'center',fontSize:32,fontWeight:typeof(fontweight) == "undefined" ? 'normal' : fontweight}}>{text}</Text>
     </Pressable>)
