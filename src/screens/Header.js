@@ -6,9 +6,9 @@ const Header = ({state}) => {
     const {text,back,setnavigation} = state
 
     return(
-    <View style={{display:'flex',height:50,backgroundColor:'gray',display:'flex',justifyContent:'center',flexDirection:'row'}}>
+    <View style={{display:'flex',height:80,backgroundColor:'gray',display:'flex',justifyContent:'center',flexDirection:'row'}}>
         
-        <View style={{flex:1,justifyContent:'space-between',alignItems:'center',flexDirection:'row'}}>
+        <View style={{flex:1,justifyContent:'space-between',alignItems:'center',flexDirection:'row',marginTop:20}}>
         <Pressable onPress={() => {
             setnavigation(back)
         }} style={{width:32,height:32,marginLeft:20}}>
@@ -19,7 +19,7 @@ const Header = ({state}) => {
         
         
         </View>
-        <View style={{flex:1,justifyContent:'center',alignItems:'center'}}>
+        <View style={{flex:1,justifyContent:'center',alignItems:'center',marginTop:20}}>
         
         <Text style={{display:'flex',justifyContent:'center',alignItems:'center',textAlign:'right',color:'black'}}>{text}</Text>
 

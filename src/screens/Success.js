@@ -18,7 +18,7 @@ const Success = ({state}) => {
             </View>
 
             <View style={{}}>            
-                <Button state={{setnavigation,setback,back_:"Register",radius:true,back,destination:"RegisterNext",text:"Se connecter",backgroundcolor:"#3457D5",textcolor:'white'}}/> 
+                <Button state={{setnavigation,setback,back_:"Register",radius:true,back,destination:"Login",text:"Se connecter",backgroundcolor:"#3457D5",textcolor:'white'}}/> 
             </View>
 
         </View>

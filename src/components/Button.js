@@ -12,13 +12,34 @@ const Button = ({state}) => {
         setback,
         back,
         back_,
-        radius
+        radius,
+        iserror
     } = state
 
     return(
     <Pressable onPress={() => {
-        setnavigation(destination) 
-        setback(back_)
+        if (typeof(iserror) != "undefined") {
+
+            let check = false
+
+            console.log("iserror:",iserror)
+
+            for (let [k, v] of Object.entries(iserror)){
+
+                console.log("Check error button",k,v)
+
+                if (v){
+                    check = true
+                    break
+                }
+            }
+            if (!check){
+                setnavigation(destination) 
+            }
+        } else{
+            setnavigation(destination)
+        }
+        //setback(back_)
     } } 
     style={{
         backgroundColor:backgroundcolor,

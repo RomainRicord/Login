@@ -11,7 +11,7 @@ import Success from './src/screens/Success';
 
 const App = () => {
 
-  const [navigation,setnavigation] = useState("Success")
+  const [navigation,setnavigation] = useState("Welcome")
   const [back,setback] = useState("")
   const [email,setemail] = useState("")
   const [password,setpassword] = useState("")
